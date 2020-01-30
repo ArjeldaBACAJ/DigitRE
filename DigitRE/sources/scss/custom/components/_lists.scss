@@ -1,0 +1,132 @@
+//
+// Lists
+// --------------------------------------------------
+
+// Default list
+//
+
+.list {
+  > li + li {
+    margin-top: 5px;
+  }
+}
+
+.list-xxs {
+  > li + li {
+    margin-top: 11px;
+  }
+}
+
+.list-xs {
+  > li + li {
+    margin-top: 16px;
+  }
+}
+
+.list-primary {
+  > li > a {
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Inline list
+.list-inline-xxs {
+  @include inline-list(16px, 5px);
+}
+
+// Terms list
+.list-terms {
+  text-align: left;
+
+  dt,
+  dd {
+    display: inline;
+  }
+
+  dt {
+    font: 700 16px $font-family-sec;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: $gray-darker;
+  }
+}
+
+// List terms minimal
+.list-terms-minimal {
+  * {
+    display: inline;
+  }
+
+  dt:after {
+    display: inline-block;
+    margin-right: 3px;
+    content: ':';
+  }
+}
+
+// List semicolon
+.list-semicolon {
+  //display: flex;
+  //flex-wrap: wrap;
+  > li {
+    display: inline;
+    color: $body-color;
+    white-space: nowrap;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.list-inline-tag {
+  color: $primary;
+
+  li {
+    display: inline-block;
+    font-size: 14px;
+    font-style: italic;
+
+    &:after {
+      content: ',';
+      color: inherit;
+    }
+
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+// List nav
+.list-nav {
+  @include spacing(30px, 10px);
+
+  > li {
+    display: inline-block;
+    font-family: $font-family-sec;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  > li.active,
+  > li a.active,
+  > li > a:hover {
+    color: $primary;
+  }
+}

@@ -1,0 +1,10 @@
+//
+// Links
+// --------------------------------------------------
+.link-primary {
+  color: $primary;
+
+  &:hover {
+    color: $black;
+  }
+}

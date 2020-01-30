@@ -1,0 +1,233 @@
+//
+// Thumb
+// --------------------------------------------------
+
+figure {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Thumb
+.thumb {
+  text-align: center;
+}
+
+.thumb__title {
+  font-size: 20px;
+  line-height: 1.33;
+  color: $black;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.thumb__subtitle {
+  @include small;
+  font-style: italic;
+}
+
+* + .thumb__subtitle {
+  margin-top: 5px;
+}
+
+@include media-breakpoint-up(xl) {
+  .thumb__title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+//thumbnail classic
+//
+
+.thumbnail-classic {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+  img {
+    transition: 370ms ease-in-out;
+  }
+  > a {
+    width: 100%;
+  }
+
+  .caption {
+    margin-top: 25px;
+  }
+
+  &:hover {
+    img {
+      box-shadow: $shadow-area-lg;
+    }
+  }
+}
+
+a.thumbnail-classic-title {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.thumbnail-classic-time {
+  display: inline-block;
+  font-size: 12px;
+  font-style: italic;
+  color: $primary;
+
+  * + & {
+    margin-top: 15px;
+  }
+}
+
+// Img thumbnail
+.img-thumbnail-variant-3 {
+  position: relative;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  
+  img{
+    width: 100%;
+  }
+
+  .icon { font-size: 30px; }
+
+  .arrow-right { font-size: 30px; }
+
+  .list-inline-tag {
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .label-custom {
+    position: absolute;
+    z-index: 11;
+    top: 18px;
+    left: 18px;
+    padding: 2px 7px;
+    font-size: 12px;
+    font-style: italic;
+    background-color: $white;
+    border-radius: $border-radius-sm;
+    color: $black;
+  }
+
+  .caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba($primary, .6);
+    transition: 250ms ease-in-out;
+
+    > * { color: $white; }
+    > * + * {
+      margin-top: 5px;
+    }
+    .divider {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      max-width: 116px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .icon { font-size: 40px; }
+    .caption {
+      padding: 50px 55px 45px;
+      > * + * {
+        margin-top: 10px;
+      }
+      .divider {
+        margin-top: 19px;
+        margin-bottom: 19px;
+      }
+    }
+    .arrow-right {
+      position: absolute;
+      right: 18px;
+      bottom: 13px;
+    }
+  }
+
+  .desktop & {
+    .caption {
+      opacity: 0;
+      transform: scale(.8);
+    }
+
+    .divider {
+      background: transparent;
+      &:before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        left: 50%;
+        right: 50%;
+        height: 1px;
+        background-color: $white;
+        transition: 250ms 280ms ease-in-out;
+      }
+    }
+
+    .hover-top-element {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 250ms 320ms linear;
+    }
+
+    .hover-bottom-element {
+      opacity: 0;
+      transform: translateY(-40px);
+      transition: 250ms 320ms linear;
+    }
+
+    &:hover {
+      .caption {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      img {
+        filter: blur(3px);
+      }
+
+      .hover-top-element,
+      .hover-bottom-element {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .divider {
+        &:before {
+          left: 0;
+          right: 0;
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes hover-blur {
+  100%{
+    filter: blur(3px);
+  }
+}

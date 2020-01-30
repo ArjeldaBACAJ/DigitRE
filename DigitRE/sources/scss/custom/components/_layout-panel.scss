@@ -1,0 +1,27 @@
+//
+// Layout panel
+// --------------------------------------------------
+
+$width-mobile: 260px;
+$width-desktop: 330px;
+
+$scrollbar-width: 20px;
+
+@mixin layout-spacing($x: 5px, $y: $x) {
+  padding-left: $x / 2;
+  padding-right: $x / 2 - 1px;
+  .isotope {
+    position: relative;
+    margin-bottom: -$y;
+    transform: translateY(-$y);
+  }
+
+  .isotope-item {
+    margin-top: $y;
+    padding: 0 $x / 2;
+    &:before {
+      content: '';
+      display: block;
+    }
+  }
+}

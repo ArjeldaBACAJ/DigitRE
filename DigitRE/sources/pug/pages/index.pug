@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-rd-video
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- var activeIndex = 0
+	- var pageClass = 'text-center'
+	- var codedBy = true
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../sections/_header-default-dark
+	='\n'
+
+	// Slider
+	include ../sections/_section-slider-default
+	='\n'
+
+	// Presentation
+	include ../sections/_section-presentation
+	='\n'
+
+	// About us
+	include ../sections/_section-about-us
+	='\n'
+
+	// Impressive Features
+	include ../sections/_section-features
+	='\n'
+
+	// Call to action
+	include ../sections/_section-cta-3
+	='\n'
+
+	// Portfolio
+	include ../sections/_section-portfolio
+	='\n'
+
+	// Working process
+	include ../sections/_section-worfing-process
+	='\n'
+
+	// Call to Action
+	include ../sections/_section-cta-1
+	='\n'
+
+	// Our Services
+	include ../sections/_section-services
+	='\n'
+
+	// Consistency is the Key
+	include ../sections/_section-content
+	='\n'
+
+	include ../sections/_section-canvas
+	='\n'
+
+	include ../sections/_section-landing-core-features
+	='\n'
+
+	include ../sections/_section-pricing-table-1
+	='\n'
+
+	//testimonials
+	include ../sections/_section-testimonials
+	='\n'
+
+	include ../sections/_section-services-2
+	='\n'
+
+	include ../sections/_section-cta-2
+	='\n'
+
+	include ../sections/_section-posts
+	='\n'
+
+	include ../sections/_section-clients
+	='\n'
+
+	// get a quote
+	include ../sections/_section-contact
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

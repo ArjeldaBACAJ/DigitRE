@@ -1,0 +1,49 @@
+include ../elements/_ui-progress-bar-linear
+	
+section.bg-default.object-wrap.bg-gray-lighter#about
+	.section-lg
+		.container
+			.row
+				.col-lg-5
+					h4.heading-decorated About us
+					p Aurona boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+					.row.row-30
+						.col-xl-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linearicons-menu3
+								.unit-body
+									p.blurb__title.heading-6: a(href="#") Award-winning designs
+									p We have received numerous awards for our designs, concepts, and ideas.
+
+						.col-xl-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linearicons-users2
+								.unit-body
+									p.blurb__title.heading-6: a(href="#") Expert team
+									p We are a team of dedicated interior design and remodeling professionals.
+
+					.row.justify-content-md-center
+						.col-md-12
+							+progress-linear({
+								title: "Dedication",
+								progressStyle: "progress-linear-modern",
+								value: "49"
+							})
+
+							+progress-linear({
+								title: "Knowledge",
+								progressStyle: "progress-linear-modern",
+								value: "29"
+							})
+
+							+progress-linear({
+								title: "Experience",
+								progressStyle: "progress-linear-modern",
+								value: "86"
+							})
+
+	.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/bg-image-1.jpg)')

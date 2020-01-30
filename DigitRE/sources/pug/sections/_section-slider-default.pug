@@ -1,0 +1,43 @@
+section.section#home
+	.swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5000')
+		.swiper-wrapper
+			.swiper-slide.context-dark.bg-overlay-dark(data-slide-bg='images/slider-slide-1-1920x1080.jpg')
+				.swiper-slide-caption.text-center
+					.container
+						.row.justify-content-center
+							.col-lg-7
+								h2(data-caption-animate='fadeInUpSmall' data-caption-delay='100') CLEAN AND CRISPY DESIGN
+								h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Aurona is crafted by top industry leaders with love, care and customer needs in mind.
+								.group-lg.group-middle
+									a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#features', data-custom-scroll-to="features") See Features
+									a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href="https://www.templatemonster.com/landing-page-template/aurona-business-responsive-html-landing-page-template-68859.html" target="_blank") Buy template
+
+			.swiper-slide.context-dark.bg-overlay-dark(data-slide-bg='images/slider-slide-2-1920x1080.jpg')
+				.swiper-slide-caption.text-center
+					.container
+						.row.justify-content-center
+							.col-lg-7
+								h2(data-caption-animate='fadeInUp' data-caption-delay='100') ADVANCED UI TOOLKIT
+								h5(data-caption-animate='fadeInUp' data-caption-delay='300') Aurona comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+								a(href="#" data-caption-animate='fadeInUp' data-caption-delay='400').button.button-primary Live demo
+
+			.swiper-slide.context-dark.vide( data-slide-bg='video/video-bg.jpg' data-vide-bg='video/video-bg' data-vide-options='posterType: jpg')
+				+vide-bg({
+					"src": "video/video-bg"
+				})
+					.swiper-slide-caption.text-center
+						.container
+							.row.justify-content-center
+								.col-lg-7
+									h2(data-caption-animate='fadeInUpSmall' data-caption-delay='100') Built by geeks
+									h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Aurona aims to satisfy real needs of real projects. We've got a pack of tools for that.
+									.group-lg.group-middle
+										a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#features', data-custom-scroll-to="features") See Features
+										a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href="https://www.templatemonster.com/landing-page-template/aurona-business-responsive-html-landing-page-template-68859.html" target="_blank") Buy template
+
+
+		// Swiper Navigation
+		.swiper-button-prev.linearicons-chevron-left
+		.swiper-button-next.linearicons-chevron-right
+
+		.swiper-pagination.pagination-mobile

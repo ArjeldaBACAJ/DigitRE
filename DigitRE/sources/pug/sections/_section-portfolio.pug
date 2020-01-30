@@ -1,0 +1,130 @@
+include ../elements/_ui-portfolio-item
+
+section.section-md.bg-default.text-center#portfolio
+ .container
+   h4.heading-decorated Portfolio
+   .isotope-wrap.row.row-70
+     .col-sm-12
+       ul.list-nav.isotope-filters.isotope-filters-horizontal
+         li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+         li: a(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Web Design
+         li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') Web Development
+
+       .isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery' data-lightgallery="group")
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+           +portfolio-item({
+             album: true,
+             href: '#',
+             img: 'portfolio-1-418x315',
+             label_text: 'Link',
+             icon_class1: 'linearicons-folder-picture',
+             items: ['Web Design'],
+             title: 'iStep Co.',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-arrow-right'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-2-1200x600',
+             img: 'portfolio-2-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Design'],
+             title: 'Fabricator Ltd.',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+           +portfolio-item({
+             album: true,
+             href: '#',
+             img: 'portfolio-3-418x315',
+             label_text: 'Link',
+             icon_class1: 'linearicons-folder-picture',
+             items: ['Web Design'],
+             title: 'Fresh Market',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-arrow-right'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-original-4-1920x1440',
+             img: 'portfolio-4-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Design'],
+             title: 'Accessories Inc.',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+           +portfolio-item({
+             album: true,
+             href: '#',
+             img: 'portfolio-5-418x315',
+             label_text: 'Link',
+             icon_class1: 'linearicons-folder-picture',
+             items: ['Web Development'],
+             title: 'CorpAdvise',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-arrow-right'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-original-6-1920x1280',
+             img: 'portfolio-6-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Development'],
+             title: 'GreenBiz',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-original-7-1920x1280',
+             img: 'portfolio-7-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Development'],
+             title: 'InDivine',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-original-8-1536x1920',
+             img: 'portfolio-8-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Development'],
+             title: 'InterFashion',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+           
+         .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+           +portfolio-item({
+             single_img: true,
+             number: 3,
+             original: 'portfolio-original-9-1567x1920',
+             img: 'portfolio-9-418x315',
+             icon_class1: 'linearicons-picture',
+             items: ['Web Development'],
+             title: 'Simplify',
+             desc: 'Professional creative solutions.',
+             icon_class2: 'linearicons-plus'
+           })
+         

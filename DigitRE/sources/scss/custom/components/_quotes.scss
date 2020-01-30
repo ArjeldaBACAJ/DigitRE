@@ -1,0 +1,80 @@
+//
+// Quotes
+// --------------------------------------------------
+
+// Quote default
+.quote-default {
+  @include responsive-block;
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-default {
+    max-width: 800px;
+  }
+}
+
+.quote-default__mark {
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  fill: $primary;
+}
+
+.quote-default__image {
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.quote-default__cite {
+  vertical-align: middle;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+
+.quote-default__text {
+  font-size: 16px;
+  font-style: italic;
+}
+
+* + .quote-default__mark {
+  margin-top: 30px;
+}
+
+* + .quote-default__text {
+  margin-top: 20px;
+}
+
+* + .quote-default__cite {
+  margin-top: 15px;
+}
+
+// Modificators
+.quote-default.quote-default_left {
+  text-align: left;
+
+  .quote-default__image {
+    text-align: center;
+  }
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  * + .quote-default__text {
+    margin-top: 30px;
+  }
+}
